@@ -116,8 +116,29 @@ color: white;
     <button class="number" id="00" onclick="appdisplay('00')">00</button>
     <button class="operator" id="." onclick="appdisplay('.')">.</button>
     <button class="operator" id="=" onclick="appdisplay('=')">=</button>
-    
+    <script>
+        const display=document.getElementById("display");
+         function clearfun(){
+            display.innerText="0";
+         }
+        function deletefun(){
+            isplay.innerText=display.inner.slice(0,1)||"0";
+        }
+        function appdisplay(value){
+            display.innerText=display.innerText==="0"&&value 
+            !=="."?value:display.innerText+value
+        }
+        function calculate(){
+            try{
+         display.innerText=eval(display.innerText);
 
+       }
+        catch{
+            display.innerText="Error";
+        }
+    }
+        
+    </script>
     </div>
     </div>
     </div>
