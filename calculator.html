@@ -7,97 +7,97 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
      
-        body {
+     body{
 
-display: flex;
-
-justify-content: center;
-
-align-items: center;
-
-height: 100vh;
-
-background-color: #f0f0f0;
-
-font-family: Arial, sans-serif;
+background-color:lime;
 
 }
 
-.container {
+.container{
 
-width: 250px;
+width:1000px;
 
-padding: 20px;
+height:550px;
 
-background-color: white;
+background-color: aquamarine;
 
-border-radius: 10px;
-
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+margin:20px auto;
 
 }
 
-.display {
+.calculator{
 
-font-size: 28px;
+width:380px;
+
+height:520px;
+
+background-color:aliceblue;
+
+margin:0 auto;
+
+top:20px;
+
+border-radius: 5px;
+
+padding:10px;
+
+box-shadow: 4px 4px 4px black;
+
+}
+
+.keyboard{
+
+height:400px;
+}
+.operator,.number{
+
+width:50px;
+
+height:50px;
+
+margin:15px;
+
+border-radius: 50%;
+
+font-size: 15px;
+
+font-weight: bold;
+
+box-shadow: 2px 2px 2px black;
+
+background-color: bisque;
+
+}
+
+#calc{
+
+background-color: black;
+
+color:aliceblue;
 
 text-align: right;
 
-padding: 10px;
+padding:20px;
 
-background-color: #222;
-
-color: white;
+border-radius: 15px;
 
 margin-bottom: 10px;
 
-border-radius: 5px;
+font-size: 30px;
 
 }
-
-.keyboard {
-
-display: grid;
-
-grid-template-columns: repeat(4, 1fr);
-
-gap: 10px;
-
-}
-
-keyboard button {
-
-padding: 15px;
-
-font-size: 18px;
-
-background-color: #f1f1f1;
-
-border: none;
-
-border-radius: 5px;
-
-cursor: pointer;
-
-}
-
-.operator {
-
-background-color: #ff9500;
-
-color: white;
-
-}
-
     </style>
 </head>
 <body>
-    <div id="container">
-    <div id="calculator">
-        
+    
+    <div class="container">
+    <div class="calculator">       
 <div class="keyboard">
-    <button class="operator" id="delete" onclick="deletefun()">del</button>
+    
+    <div id="calc">0</div>
+
     <button class="operator" id="clear" onclick="clearfun()">C</button>
+    <button class="operator" id="delete" onclick="deletefunfun()">del</button>
     <button class="operator" id="%" onclick="appdisplay('%')">%</button>
     <button class="operator" id="*" onclick="appdisplay('*')">*</button>
     <button class="number" id="7" onclick="appdisplay('7')">7</button>
@@ -115,20 +115,40 @@ color: white;
     <button class="number" id="0" onclick="appdisplay('0')">0</button>
     <button class="number" id="00" onclick="appdisplay('00')">00</button>
     <button class="operator" id="." onclick="appdisplay('.')">.</button>
-    <button class="operator" id="=" onclick="appdisplay('=')">=</button>
+    <button class="operator" id="=" onclick="result('=')">=</button>
     <script>
-        const display=document.getElementById("display");
+        const display=document.getElementById("calc");
+
+        
          function clearfun(){
             display.innerText="0";
          }
-        function deletefun(){
-            isplay.innerText=display.inner.slice(0,1)||"0";
+
+         
+        function deletefunr(){
+            if(display.innerText.length>1)
+        {
+            display.innerText=display.innerText.Slice(0,-1);
         }
+        else{
+            display.innerText="0"
+        }
+    }
+         
+        
         function appdisplay(value){
-            display.innerText=display.innerText==="0"&&value 
-            !=="."?value:display.innerText+value
+            if(display.innerText==="0" && value!=".")
+        {
+            dispaly.innerText=value;
         }
-        function calculate(){
+        else{
+            display.innerText +=value;
+        }
+        }
+
+        
+        
+        function result(){
             try{
          display.innerText=eval(display.innerText);
 
