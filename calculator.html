@@ -1,166 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
      
-     body{
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-background-color:lime;
-
-}
-
-.container{
-
-width:1000px;
-
-height:550px;
-
-background-color: aquamarine;
-
-margin:20px auto;
-
-}
-
-.calculator{
-
-width:380px;
-
-height:520px;
-
-background-color:aliceblue;
-
-margin:0 auto;
-
-top:20px;
-
-border-radius: 5px;
-
-padding:10px;
-
-box-shadow: 4px 4px 4px black;
-
-}
-
-.keyboard{
-
-height:400px;
-}
-.operator,.number{
-
-width:50px;
-
-height:50px;
-
-margin:15px;
-
-border-radius: 50%;
-
-font-size: 15px;
-
-font-weight: bold;
-
-box-shadow: 2px 2px 2px black;
-
-background-color: bisque;
-
-}
-
-#calc{
-
-background-color: black;
-
-color:aliceblue;
-
-text-align: right;
-
-padding:20px;
-
-border-radius: 15px;
-
-margin-bottom: 10px;
-
-font-size: 30px;
-
-}
-    </style>
-</head>
-<body>
-    
-    <div class="container">
-    <div class="calculator">       
-<div class="keyboard">
-    
-    <div id="calc">0</div>
-
-    <button class="operator" id="clear" onclick="clearfun()">C</button>
-    <button class="operator" id="delete" onclick="deletefunfun()">del</button>
-    <button class="operator" id="%" onclick="appdisplay('%')">%</button>
-    <button class="operator" id="*" onclick="appdisplay('*')">*</button>
-    <button class="number" id="7" onclick="appdisplay('7')">7</button>
-    <button class="number" id="8" onclick="appdisplay('8')">8</button>
-    <button class="number" id="9" onclick="appdisplay('9')">9</button>
-    <button class="operator" id="/" onclick="appdisplay('/')">/</button>
-    <button class="number" id="4" onclick="appdisplay('4')">4</button>
-    <button class="number" id="5" onclick="appdisplay('5')">5</button>
-    <button class="number" id="6" onclick="appdisplay('6')">6</button>
-    <button class="operator" id="-" onclick="appdisplay('-')">-</button>
-    <button class="number" id="1" onclick="appdisplay('1')">1</button>
-    <button class="number" id="2" onclick="appdisplay('2')">2</button>
-    <button class="number" id="3" onclick="appdisplay('3')">3</button>
-    <button class="operator" id="+" onclick="appdisplay('+')">+</button>
-    <button class="number" id="0" onclick="appdisplay('0')">0</button>
-    <button class="number" id="00" onclick="appdisplay('00')">00</button>
-    <button class="operator" id="." onclick="appdisplay('.')">.</button>
-    <button class="operator" id="=" onclick="result('=')">=</button>
-    <script>
-        const display=document.getElementById("calc");
-
-        
-         function clearfun(){
-            display.innerText="0";
-         }
-
-         
-        function deletefunr(){
-            if(display.innerText.length>1)
-        {
-            display.innerText=display.innerText.Slice(0,-1);
-        }
-        else{
-            display.innerText="0"
-        }
-    }
-         
-        
-        function appdisplay(value){
-            if(display.innerText==="0" && value!=".")
-        {
-            dispaly.innerText=value;
-        }
-        else{
-            display.innerText +=value;
-        }
-        }
-
-        
-        
-        function result(){
-            try{
-         display.innerText=eval(display.innerText);
-
-       }
-        catch{
-            display.innerText="Error";
-        }
-    }
-        
-    </script>
-    </div>
-    </div>
-    </div>
-</body>
-</html>
+    <style>
+     body
+      { background-color: lime; }
+       .container 
+       { width: 1000px; height: 550px; background-color: aquamarine; margin: 20px auto; } 
+       .calculator 
+       { width: 380px; height: 520px; background-color: aliceblue; margin: 0 auto; top: 20px; border-radius: 5px; padding: 10px; box-shadow: 4px 4px 4px black; } 
+       .keyboard { height: 400px; } .operator, .number { width: 50px; height: 50px; margin: 15px; border-radius: 50%; font-size: 15px; font-weight: bold; box-shadow: 2px 2px 2px black; background-color: bisque; } 
+       #calc { background-color: black; color: aliceblue; text-align: right; padding: 20px; border-radius: 15px; margin-bottom: 10px; font-size: 30px; } 
+       </style> </head> <body> <div class="container"> 
+        <div class="calculator"> <div class="keyboard"> 
+            <div id="calc">0</div> 
+            <button class="operator" id="clear" onclick="clearfun()">C</button>
+             <button class="operator" id="delete" onclick="deletefun()">del</button> 
+             <button class="operator" id="%" onclick="appdisplay('%')">%</button>
+              <button class="operator" id="*" onclick="appdisplay('*')">*</button> 
+              <button class="number" id="7" onclick="appdisplay('7')">7</button> 
+              <button class="number" id="8" onclick="appdisplay('8')">8</button> 
+              <button class="number" id="9" onclick="appdisplay('9')">9</button> 
+              <button class="operator" id="/" onclick="appdisplay('/')">/</button>
+               <button class="number" id="4" onclick="appdisplay('4')">4</button> 
+               <button class="number" id="5" onclick="appdisplay('5')">5</button> 
+               <button class="number" id="6" onclick="appdisplay('6')">6</button> 
+               <button class="operator" id="-" onclick="appdisplay('-')">-</button
+                > <button class="number" id="1" onclick="appdisplay('1')">1</button> 
+                <button class="number" id="2" onclick="appdisplay('2')">2</button> 
+                <button class="number" id="3" onclick="appdisplay('3')">3</button> 
+                <button class="operator" id="+" onclick="appdisplay('+')">+</button> 
+                <button class="number" id="0" onclick="appdisplay('0')">0</button> 
+                <button class="number" id="00" onclick="appdisplay('00')">00</button>
+                 <button class="operator" id="." onclick="appdisplay('.')">.</button> 
+                 <button class="operator" id="=" onclick="result()">=</button> 
+                 <script>
+                  const display = document.getElementById("calc");
+                   function clearfun() { display.innerText = "0"; } 
+                   function deletefun() { if (display.innerText.length > 1) 
+                   { display.innerText = display.innerText.slice(0, -1); } 
+                   else { display.innerText = "0"; } } 
+                   function appdisplay(value) { if (display.innerText === "0" && value !== ".") { display.innerText = value; } 
+                   else { display.innerText += value; } } function result()
+                    { try { display.innerText = eval(display.innerText); } 
+                   catch { display.innerText = "Error"; } } </script> </div> </div> </div> </body> </html>
+   
+   
